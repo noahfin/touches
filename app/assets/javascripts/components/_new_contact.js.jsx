@@ -16,10 +16,10 @@ var NewContact = React.createClass({
 	render() {
 		return (
 			<div> 
-				<input ref='name' placeholder='Enter the persons name'/>
-				<input ref='email' placeholder='Enter their email address'/>
-				<input ref='address' placeholder='Enter their street address'/>
-				<input ref='number' placeholder='Enter their phone number'/>
+				<input ref='name' type='text'placeholder='Enter the persons name'/>
+				<input ref='email' type='text' placeholder='Enter their email address'/>
+				<input ref='address' type='text' placeholder='Enter their street address'/>
+				<input ref='number'  type='text'placeholder='Enter their phone number'/>
 				<button onClick={this.handleClick}>Add new contact</button>
 			</div>
 		)

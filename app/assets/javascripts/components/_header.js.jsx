@@ -1,8 +1,8 @@
 var Header = React.createClass({
 	render(){
 		return (
-			<div>
-				<h1>Contacts</h1>
+			<div className="header">
+				<h1> My Touches</h1>
 			</div>
 		)
 	}

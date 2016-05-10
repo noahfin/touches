@@ -3,8 +3,8 @@ var Main = React.createClass({
 	render() {
 		return (
 			<div>
-				<Header />
-				<Body />
+				<Header className="header" />
+				<Body className="wrapper"/>
 			</div>
 		)
 	}

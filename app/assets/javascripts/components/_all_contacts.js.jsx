@@ -10,7 +10,7 @@ var AllContacts = React.createClass({
 		 var contacts = this.props.contacts.map((contact) => {
       
 			return (
-				<div key={contact.id}>
+				<div className="contact-box" key={contact.id}>
 					<h3> {contact.name} </h3>
 					<p> {contact.email} </p>
 					<p> {contact.address} </p>
@@ -21,7 +21,7 @@ var AllContacts = React.createClass({
 			)
 		});
 		return (
-			<div>
+			<div className="left-side">
 				{contacts}
 				
 			</div>

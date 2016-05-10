@@ -32,7 +32,7 @@ var Body = React.createClass({
 	},
 	render() {
 		return (
-			<div> 
+			<div className="container"> 
 				<NewContact handleSubmit={this.handleSubmit}/>
 				<AllContacts contacts={this.state.contacts}  handleDelete={this.handleDelete}/>
 				<AllTouches />

@@ -13,3 +13,62 @@
  *= require_tree .
  *= require_self
  */
+ * {
+ 	margin: 0;
+ 	padding: 0;
+ }
+body {
+	background-color: #333;
+	color: #00aba9
+}
+.header{
+	/*background: #1A504E;*/
+	background: url('/assets/phone-guy.jpg');
+	background-size: cover;
+	background-position: 0% 60%; 
+	height: 150px;
+	margin-bottom: 50px;
+	color: #fff;
+	border-bottom: 12px solid #223432; 
+	padding: 60px  80px 10px;
+}
+.container {
+	width: 85%;
+	margin: auto;
+	padding: 10px;
+}
+.right_side {
+	width: 35%;
+}
+.left_side {
+	width: 65%;
+}
+.right-side, .left-side {
+	float: left;
+}
+.touch-box, .contact-box {
+	height: 200px; 
+	border: 1px solid black;
+	border-top: 20px solid  #1A504E;
+	margin-top: 20px;
+	margin-bottom: 10px;
+	background: url('/assets/sci_fi_hexagon.jpg');
+	}
+
+.touch-box {
+	width: 100%;
+	margin-left: 50px;
+}
+input[type="text"] {
+	height: 30px;
+	width: 200px;
+	margin-right: 15px;
+}
+button{
+	height: 30px;
+	border: none;
+	background: #DD7500;
+	width: 150px;
+}
+
+

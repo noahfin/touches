@@ -12,17 +12,17 @@ var AllTouches = React.createClass({
      var touches = this.state.touches.map((touch) => {
       
       return (
-        <div key={touch.id}>
-          <h3>{touch.calls }</h3>
-          <h3>{touch.emails}</h3>
-          <h3>{touch.mail}</h3>
-          <h3>{touch.advertisements}</h3>
+        <div className="touch-box" key={touch.id}>
+          <h3>{'Calls: ' +touch.calls }</h3>
+          <h3>{'Emails: ' +touch.emails}</h3>
+          <h3>{'Mail: ' +touch.mail}</h3>
+          <h3>{'Advertisements: '+touch.advertisements}</h3>
         </div>
         
       )
     });
     return (
-      <div>
+      <div className="right-side">
         {touches}
       </div>
     )
