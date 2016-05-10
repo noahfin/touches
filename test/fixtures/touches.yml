@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  calls: 1
+  emails: 1
+  mail: 1
+  advertisements: 1
+
+two:
+  calls: 1
+  emails: 1
+  mail: 1
+  advertisements: 1
