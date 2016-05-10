@@ -1,3 +1,3 @@
 class Touch < ActiveRecord::Base
-	belongs_to :touch
+	belongs_to :contact
 end

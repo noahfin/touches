@@ -1,12 +1,15 @@
 
 var Body = React.createClass({
 	getInitialState() {
-		return { contacts: [] }
+		return { contacts: [], touches: [] }
 	},
 
 	componentDidMount() {
 		$.getJSON('/api/v1/contacts.json', (response) => {this.setState( {contacts:response}) });
 	},
+	// componentDidMount() {
+	// 
+	// },
 	handleSubmit(contact) {
 		var newState = this.state.contacts.concat(contact);
 		this.setState({ contacts: newState})
@@ -32,6 +35,7 @@ var Body = React.createClass({
 			<div> 
 				<NewContact handleSubmit={this.handleSubmit}/>
 				<AllContacts contacts={this.state.contacts}  handleDelete={this.handleDelete}/>
+				<AllTouches />
 			</div>
 		)
 	}

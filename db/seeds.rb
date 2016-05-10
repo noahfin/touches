@@ -5,9 +5,13 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-Contact.create(Name: "Eric Hegadhl", Email: "eric.hegdahl@generalassemb.ly", Address: "New york", Phone: "222 234-5503") 
-Contact.create(Name: "Caludia Matos", Email: "claudia.matos@generalassemb.ly", Address: "New york", Phone: "222 564-7803") 
-Contact.create(Name: "jaden Carver", Email: "jaden.carver@generalassemb.ly", Address: "New york", Phone: "222 736-8583") 
-Contact.create(Name: "kimberly Chodnicki", Email: "kimberly.chodnicki@generalassemb.ly", Address: "New york", Phone: "222 456-6801") 
+Touch.create(calls: 0, emails: 0, mail: 0, advertisements: 0)
+Touch.create(calls: 0, emails: 0, mail: 0, advertisements: 0)
+Touch.create(calls: 0, emails: 0, mail: 0, advertisements: 0)
+Touch.create(calls: 0, emails: 0, mail: 0, advertisements: 0)
+Contact.create(name: "Eric Hegadhl", email: "eric.hegdahl@generalassemb.ly", address: "New york", phone: "222 234-5503", touch_id: 1) 
+Contact.create(name: "Caludia Matos", email: "claudia.matos@generalassemb.ly", address: "New york", phone: "222 564-7803", touch_id: 2) 
+Contact.create(name: "jaden Carver", email: "jaden.carver@generalassemb.ly", address: "New york", phone: "222 736-8583", touch_id: 3) 
+Contact.create(name: "kimberly Chodnicki", email: "kimberly.chodnicki@generalassemb.ly", address: "New york", phone: "222 456-6801", touch_id: 4) 
 
 

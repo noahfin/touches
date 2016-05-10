@@ -3,6 +3,7 @@ class Api::V1::TouchesController < Api::V1::BaseController
 	def index
 			respond_with Touch.all
 	end
+
 	def create 
 		respond_with :api, :v1, Touch.create(contact_params)
 	end
