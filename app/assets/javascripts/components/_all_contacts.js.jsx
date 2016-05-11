@@ -16,7 +16,7 @@ var AllContacts = React.createClass({
 					<p> {touch.email} </p>
 					<p> {touch.address} </p>
 					<p> {touch.phone} </p>
-					<button className="little-btnyyyy" onClick={this.handleDelete.bind(this, touch.id)}> Delete</button>
+					<button className="little-btn" onClick={this.handleDelete.bind(this, touch.id)}> Delete</button>
 				</div>
 
 			)

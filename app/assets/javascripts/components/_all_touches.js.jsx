@@ -5,10 +5,9 @@ var AllTouches = React.createClass({
       
       return (
         <div className="touch-box" key={touch.id}>
-          <h3>{'Calls: ' +touch.calls }</h3>
-          <h3>{'Emails: ' +touch.emails}</h3>
-          <h3>{'Mail: ' +touch.mail}</h3>
-          <h3>{'Advertisements: '+touch.advertisements}</h3>
+          <Touch touch={touch}
+          handleEdit={this.handledit} />
+          
         </div>
         
       )
