@@ -16,9 +16,8 @@ var Body = React.createClass({
 	    for (var i = 0; i <= propName; i++) {
 	    	contacts.push(response[propName.toString()].touch_contacts[i]);
 	    };
-	   
-	   		this.setState( {contacts: contacts});
-	   
+	   		this.setState( {contacts: contacts}); 
+
    	 });
   }, 
 	handleSubmit(contact) {
@@ -31,7 +30,7 @@ var Body = React.createClass({
 			type: 'DELETE',
 			success: ()=>  {
 				this.removeContactClient(id);
-				this.removeTouchesClient(id);
+				
 			}
 
 		});
@@ -40,14 +39,14 @@ var Body = React.createClass({
 		var newContacts = this.state.contacts.filter((contact) => {
 			return contact.id != id;
 		});
+		var newTouches = this.state.touches.splice(1, id);
+		
+			
+
 		this.setState( {contacts: newContacts});
+		this.setState( {touches: newTouches});
 	},
-	removeTouchesClient(id) {
-		var newTpuches = this.state.touches.filter((touch) => {
-			return touch.id != id;
-		});
-		this.setState( {contacts: newContacts});
-	},
+	
 	render() {
 		return (
 			<div className="container"> 

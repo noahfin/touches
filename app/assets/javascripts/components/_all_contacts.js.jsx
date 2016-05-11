@@ -9,7 +9,6 @@ var AllContacts = React.createClass({
 	},
 	render() {
 		  var touches = this.props.contacts.map((touch) => {
-      console.log(touch);
       
 			return (
 				<div className="contact-box" key={touch.id}>
