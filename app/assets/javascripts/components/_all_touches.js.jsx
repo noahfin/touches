@@ -1,15 +1,7 @@
 var AllTouches = React.createClass({
-  getInitialState: function() {
-    return {
-      touches: [] 
-    };
-  },
-
-  componentDidMount() {
-   $.getJSON('/api/v1/touches.json', (response) => {this.setState( {touches:response}) });
- }, 
+ 
  render() {
-     var touches = this.state.touches.map((touch) => {
+     var touches = this.props.touches.map((touch) => {
       
       return (
         <div className="touch-box" key={touch.id}>

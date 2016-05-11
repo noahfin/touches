@@ -1,15 +1,26 @@
 
 var Body = React.createClass({
-	getInitialState() {
-		return { contacts: [], touches: [] }
-	},
 
-	componentDidMount() {
-		$.getJSON('/api/v1/contacts.json', (response) => {this.setState( {contacts:response}) });
-	},
-	// componentDidMount() {
-	// 
-	// },
+	 getInitialState: function() {
+    return {
+      touches: [],
+      contacts: []
+    };
+  },
+
+  componentDidMount() {
+   $.getJSON('/api/v1/touches.json', (response) => {
+	   	this.setState( {touches:response}); 
+	   	var propName = response.length -1;
+	    var contacts =	[];
+	    for (var i = 0; i < propName; i++) {
+	    	contacts.push(response[propName.toString()].touch_contacts[i]);
+	    };
+	   
+	   		this.setState( {contacts: contacts});
+	   
+   	 });
+  }, 
 	handleSubmit(contact) {
 		var newState = this.state.contacts.concat(contact);
 		this.setState({ contacts: newState})
@@ -35,7 +46,7 @@ var Body = React.createClass({
 			<div className="container"> 
 				<NewContact handleSubmit={this.handleSubmit}/>
 				<AllContacts contacts={this.state.contacts}  handleDelete={this.handleDelete}/>
-				<AllTouches />
+				<AllTouches touches={this.state.touches} />
 			</div>
 		)
 	}

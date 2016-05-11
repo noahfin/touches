@@ -1,5 +1,6 @@
 var NewContact = React.createClass({
 	handleClick() {
+		this.loadTouchesFromServer();
 		var name = this.refs.name.value;
 		var email = this.refs.email.value;
 		var address = this.refs.address.value;

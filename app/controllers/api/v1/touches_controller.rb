@@ -1,7 +1,11 @@
-
+#the one that works
 class Api::V1::TouchesController < Api::V1::BaseController
 	def index
-			respond_with Touch.all
+		  touches = Touch.all
+		  touches[-1] = { touch_contacts: Contact.all}
+		 
+
+			respond_with touches
 	end
 	def create 
 		respond_with :api, :v1, Touch.create(contact_params)

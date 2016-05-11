@@ -10,6 +10,7 @@ class Api::V1::ContactsController < Api::V1::BaseController
 	end
 
 	def destroy
+		Touch.destroy(params[:id])
 		respond_with Contact.destroy(params[:id])
 	end
 
