@@ -16,7 +16,7 @@ class Api::V1::TouchesController < Api::V1::BaseController
 	end
 
 	def update
-		item = Touch.find(params["id"])
+		touch = Touch.find(params["id"])
 		touch.update_attributes(touch_params)
 		respond_with touch, json: touch
 	end

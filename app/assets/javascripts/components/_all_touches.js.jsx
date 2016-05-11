@@ -1,12 +1,14 @@
 var AllTouches = React.createClass({
- 
+ onUpdate(touch) {
+    this.props.onUpdate(touch);
+  },
  render() {
      var touches = this.props.touches.map((touch) => {
       
       return (
         <div className="touch-box" key={touch.id}>
           <Touch touch={touch}
-          handleEdit={this.handledit} />
+          handleUpdate={this.onUpdate}/>
           
         </div>
         

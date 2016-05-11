@@ -35,14 +35,29 @@ var Body = React.createClass({
 
 		});
 	},
+	handleUpdate(touch) {
+		$.ajax({
+			url: `/api/v1/touches/${touch.id}`,
+			type: 'PUT',
+			data: {touch: touch},
+			success: () => {
+					this.updateTouches(touch);
+			}
+		}
+	)},
+	updateTouches(touch) {
+		var touches = this.state.touches.filter((t) => {return t.id != touch.id});
+		var index = touch.id -1;
+		touches.splice(index, 0, touch);
+		this.setState({touches: touches});
+	},
+
 	removeContactClient(id) {
 		var newContacts = this.state.contacts.filter((contact) => {
 			return contact.id != id;
 		});
 		var newTouches = this.state.touches.splice(1, id);
 		
-			
-
 		this.setState( {contacts: newContacts});
 		this.setState( {touches: newTouches});
 	},
@@ -52,7 +67,7 @@ var Body = React.createClass({
 			<div className="container"> 
 				<NewContact handleSubmit={this.handleSubmit}/>
 				<AllContacts contacts={this.state.contacts}  handleDelete={this.handleDelete}/>
-				<AllTouches touches={this.state.touches} />
+				<AllTouches touches={this.state.touches} onUpdate={this.handleUpdate}/>
 			</div>
 		)
 	}

@@ -8,7 +8,9 @@ var Touch = React.createClass({
 			var emails = this.refs.emails.value;
 			var mail = this.refs.mail.value;
 			var advertisements =this.refs.mail.value;
-			console.log('in handleEdit', this.state.editable, calls, emails);
+			var id = this.props.touch.id;
+			var touch = {id: id, calls: calls , emails: emails, mail: mail, advertisements: advertisements};
+			this.props.handleUpdate(touch);
 		}
     this.setState({ editable: !this.state.editable});	
   },
