@@ -1,4 +1,3 @@
-
 var Body = React.createClass({
 
 	 getInitialState: function() {
@@ -10,7 +9,7 @@ var Body = React.createClass({
 
   componentDidMount() {
    $.getJSON('/api/v1/touches.json', (response) => {
-
+   		console.log(response);
 	   	var touches = response;
 	   	var propName = response.length -1;
 	    var contacts =	[];
@@ -18,7 +17,9 @@ var Body = React.createClass({
 	    	contacts.push(response[propName.toString()].touch_contacts[i]);
 	    };
 	   		this.setState( {contacts: contacts}); 
+	   		console.log(touches);
 	   		touches.pop();
+	   		console.log(touches);
 				this.setState( {touches:response}); 
    	 });
   }, 
@@ -48,9 +49,19 @@ var Body = React.createClass({
 		}
 	)},
 	updateTouches(touch) {
-		var touches = this.state.touches.filter((t) => {return t.id != touch.id});
-		var index = touch.id -1;
-		touches.splice(index, 0, touch);
+		 // var touches = this.state.touches.filter((t) => {return t.id != touch.id});
+ 		 var touches = this.state.touches;
+ 		 var index = 0;
+
+ 		for (var i = 0; i < touches.length; i++) {
+ 			  if (touches[i].id ===  touch.id) {
+ 			   index = i;
+ 			   break;
+ 			  }
+ 		};
+		console.log(index);
+   
+		touches[index] = touch;
 		this.setState({touches: touches});
 	},
 
