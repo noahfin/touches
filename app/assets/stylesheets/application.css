@@ -33,6 +33,7 @@ body {
 	color: #fff;
 	border-bottom: 12px solid #223432; 
 	padding: 60px  80px 10px;
+	width: vw;
 
 }
 .textHead {
@@ -54,6 +55,7 @@ body {
 	float: left;
 }
 .touch-box, .contact-box {
+	word-wrap: break-word;
 	height: 200px; 
 	border-top: 20px solid  #1A504E;
 	margin-top: 20px;
@@ -65,6 +67,7 @@ body {
 	width: 100%;
 	margin-left: 50px;
 }
+
 .largeIn{
 	height: 30px;
 	width: 200px;
@@ -76,6 +79,8 @@ button{
 	background: #DD7500;
 	width: 150px;
 	color: #fff;
+	font-size: 14px;
+	font-weight: 100;
 }
 .little-btn, .little-btn-edit {
 	width: 65px;
@@ -102,5 +107,146 @@ padding: 7px;
 }
 .smallIn1 { margin-left: 80px;}
 .smallIn2 {	margin-left: 62px;}
-.smallIn3 { margin-left: 79px;}
+.smallIn3 { margin-left: 80px;}
 .smallIn4 { margin-left: 5px;}
+
+@media only screen and (max-width: 925px) {
+	.largeIn {
+		margin-top: 10px;
+	}
+	button {
+		width: 423px;
+	}
+}
+@media only screen and (max-width: 1207px) {
+	button {
+		margin-top: 10px;
+		width: 203px;
+	}
+}
+
+@media only screen and (max-width: 575px) {
+    .container {
+    	width: 100%;
+    }
+    .header{
+				margin-bottom: 0;
+			}
+    .touch-box {
+    	margin-left: 30px;
+    }
+    .largeIn {
+    	width: 225px;
+    	margin-top: 10px;
+    }
+    button {
+    	width: 472px;
+    }
+}
+@media only screen and (max-width: 580px) {
+    .right_side {
+	     width: 50%;
+    }
+
+		.left-side {
+			width: 275px;
+		}
+    .touch-box {
+    	margin-left: 10px;
+    }
+    .contact-box {
+			width: 100%;
+			margin-right: 0;
+			}
+    button {
+    	margin-top: 10px;
+    	
+    }
+}
+@media only screen and (max-width: 490px) {
+			.header{
+			padding-top: 10px;
+			text-align: center;
+			}
+	    .largeIn {
+	    	width: 190px;
+	    }
+	    button {
+	    	width: 402px;
+	    }
+	    .right_side {
+	     width: 40%;
+    }
+		.left-side {
+			width: 225px;
+		}
+    .touch-box {
+    	margin-left: 5px;
+    }
+	 .smallIn1,.smallIn2,.smallIn3, .smallIn4 {
+			width: 35px;
+			height: 25px;
+		}
+			
+	}
+@media only screen and (max-width: 417px) {
+	.largeIn {
+	    	width: 373px;
+	    }
+	    button {
+	    	width: 377px;
+	    }
+	    .right_side {
+	     width: 40%;
+    }
+		.left-side {
+			width: 190px;
+		}
+    .touch-box {
+    	margin-left: 5px;
+    }
+	 
+}
+@media only screen and (max-width: 374px) {
+	.largeIn {
+	    	width: 100%;
+	    }
+	    .textHead {
+	    	margin-left: 20px;
+	    	font-size: 28px;
+	    }
+	    button {
+	    	width: 100%;
+	    }
+	    .right-side{
+	    
+	    width: 40%;
+	    word-wrap: break-word;
+    }
+		.left-side {
+			width: 58%;
+			margin-right: 4px;
+		}
+    .touch-box {
+    	margin-top: 8px;
+    	margin-left: 0px;
+    	width: 100%;
+    	margin-bottom: 4px;
+    }
+    .contact-box {
+    	margin: 0;
+    	width: 100%;
+    	margin-top: 8px;
+    	margin-bottom: 5px;
+    }
+    .container {
+    	margin: 0;
+    	padding: 0;
+    	margin-bottom: 4px;
+    	width: 100%;
+    }
+    html{
+    	width: 100vw;
+    }
+}
+
