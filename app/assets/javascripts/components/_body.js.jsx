@@ -10,14 +10,16 @@ var Body = React.createClass({
 
   componentDidMount() {
    $.getJSON('/api/v1/touches.json', (response) => {
-	   	this.setState( {touches:response}); 
+
+	   	var touches = response;
 	   	var propName = response.length -1;
 	    var contacts =	[];
-	    for (var i = 0; i <= propName; i++) {
+	    for (var i = 0; i < propName; i++) {
 	    	contacts.push(response[propName.toString()].touch_contacts[i]);
 	    };
 	   		this.setState( {contacts: contacts}); 
-
+	   		touches.pop();
+				this.setState( {touches:response}); 
    	 });
   }, 
 	handleSubmit(contact) {
@@ -30,7 +32,7 @@ var Body = React.createClass({
 			type: 'DELETE',
 			success: ()=>  {
 				this.removeContactClient(id);
-				
+					
 			}
 
 		});

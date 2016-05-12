@@ -1,7 +1,8 @@
 #the one that works
 class Api::V1::TouchesController < Api::V1::BaseController
 	def index
-		  touches = Touch.all
+		  touches = Touch.all 
+		  touches << { placeholder: []}
 		  touches[-1] = { touch_contacts: Contact.all}
 		 
 
