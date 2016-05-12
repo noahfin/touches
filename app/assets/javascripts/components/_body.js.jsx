@@ -9,7 +9,7 @@ var Body = React.createClass({
 
   componentDidMount() {
    $.getJSON('/api/v1/touches.json', (response) => {
-   		console.log(response);
+   		
 	   	var touches = response;
 	   	var propName = response.length -1;
 	    var contacts =	[];
@@ -17,15 +17,27 @@ var Body = React.createClass({
 	    	contacts.push(response[propName.toString()].touch_contacts[i]);
 	    };
 	   		this.setState( {contacts: contacts}); 
-	   		console.log(touches);
+	   	
 	   		touches.pop();
-	   		console.log(touches);
+	
 				this.setState( {touches:response}); 
    	 });
   }, 
 	handleSubmit(contact) {
 		var newState = this.state.contacts.concat(contact);
-		this.setState({ contacts: newState})
+		var touches = this.state.touches
+
+		 
+		touches[touches.length] = {
+	 		advertisements:		0,
+			calls:	0,
+			emails:	0,
+			id:		contact.id,
+			mail:		0
+		}
+			
+		 this.setState({ contacts: newState});
+		 this.setState({ touches: touches});
 	},
 	handleDelete(id) {
 		$.ajax({
@@ -49,7 +61,6 @@ var Body = React.createClass({
 		}
 	)},
 	updateTouches(touch) {
-		 // var touches = this.state.touches.filter((t) => {return t.id != touch.id});
  		 var touches = this.state.touches;
  		 var index = 0;
 
@@ -59,8 +70,7 @@ var Body = React.createClass({
  			   break;
  			  }
  		};
-		console.log(index);
-   
+	   
 		touches[index] = touch;
 		this.setState({touches: touches});
 	},
