@@ -17,6 +17,7 @@
  * {
  	margin: 0;
  	padding: 0;
+ 	box-sizing: border-box;
  }
 body {
 	background-color: #333;
@@ -28,13 +29,17 @@ body {
 	background: url('/assets/phone-guy.jpg');
 	background-size: cover;
 	background-position: 0% 60%; 
-	height: 150px;
+	height: 200px;
 	margin-bottom: 50px;
 	color: #fff;
 	border-bottom: 12px solid #223432; 
 	padding: 60px  80px 10px;
-	width: vw;
+	
 
+}
+.new-container{
+	box-sizing: border-box;
+	width: auto;;
 }
 .textHead {
 	font-size: 44px;
@@ -207,10 +212,14 @@ padding: 7px;
     }
 	 
 }
-@media only screen and (max-width: 374px) {
+@media only screen and (max-width: 395px) {
 	.largeIn {
 	    	width: 100%;
+	    	margin-right: 0px;
+	    	padding-right: 0px;
+
 	    }
+	    
 	    .textHead {
 	    	margin-left: 20px;
 	    	font-size: 28px;
@@ -245,8 +254,6 @@ padding: 7px;
     	margin-bottom: 4px;
     	width: 100%;
     }
-    html{
-    	width: 100vw;
-    }
+    
 }
 

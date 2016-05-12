@@ -15,7 +15,7 @@ var NewContact = React.createClass({
 	},
 	render() {
 		return (
-			<div> 
+			<div className="new-container"> 
 				<input  className="largeIn"  ref='name' type='text'placeholder='Enter the persons name'/>
 				<input className="largeIn"  ref='email' type='text' placeholder='Enter their email address'/>
 				<input className="largeIn"  ref='address' type='text' placeholder='Enter their street address'/>
