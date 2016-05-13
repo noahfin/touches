@@ -41,6 +41,42 @@ body {
 	box-sizing: border-box;
 	width: auto;;
 }
+.side-container{
+	position: fixed;
+	right: 0;
+	top: 260px;
+	width: 54px;
+	height: 200px;
+	background: #223432;
+	padding-right:  8px;
+
+}
+.back, .search{
+	display: block;
+  width: 54px;
+  margin-right: 3px;
+ font-size: 11px;
+ background: none;
+}
+.back {
+	padding-right: 10px;
+	height: 65px;
+	background: url('/assets/up-arrow.png');
+	background-position: -1px 3px;
+	object-fit: cover;
+	margin-bottom: 50px;
+}
+.search-input {
+	position: absolute;
+	right: 50px;
+	top: 112px;
+	width: 300%;
+	height: 36px;
+	margin-left: -30px;
+}
+.search {
+	margin-left: 4px;
+}
 .textHead {
 	font-size: 44px;
 	font-weight: 100;
@@ -79,7 +115,7 @@ body {
 	margin-right: 15px;
 }
 button{
-	height: 34px;
+	height: 30px;
 	border: none;
 	background: #DD7500;
 	width: 150px;

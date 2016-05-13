@@ -11,7 +11,7 @@ var AllContacts = React.createClass({
 		  var touches = this.props.contacts.map((touch) => {
       
 			return (
-				<div className="contact-box" key={touch.id}>
+				<div id ={touch.name.replace(/ +/g, "").toLowerCase()} className="contact-box" key={touch.id}>
 					<h3> {touch.name} </h3>
 					<p> {touch.email} </p>
 					<p> {touch.address} </p>

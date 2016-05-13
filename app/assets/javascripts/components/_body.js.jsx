@@ -89,6 +89,7 @@ var Body = React.createClass({
 		return (
 			<div className="container"> 
 				<NewContact handleSubmit={this.handleSubmit}/>
+				<SearchContact />
 				<AllContacts contacts={this.state.contacts}  handleDelete={this.handleDelete}/>
 				<AllTouches touches={this.state.touches} onUpdate={this.handleUpdate}/>
 			</div>
