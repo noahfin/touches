@@ -45,7 +45,7 @@ body {
 	position: fixed;
 	right: 0;
 	top: 260px;
-	width: 54px;
+	width: 50px;
 	height: 200px;
 	background: #223432;
 	padding-right:  8px;
@@ -53,7 +53,7 @@ body {
 }
 .back, .search{
 	display: block;
-  width: 54px;
+  width: 50px;
   margin-right: 3px;
  font-size: 11px;
  background: none;
@@ -62,7 +62,7 @@ body {
 	padding-right: 10px;
 	height: 65px;
 	background: url('/assets/up-arrow.png');
-	background-position: -1px 3px;
+	background-position: -5px 3px;
 	object-fit: cover;
 	margin-bottom: 50px;
 }
@@ -75,7 +75,7 @@ body {
 	margin-left: -30px;
 }
 .search {
-	margin-left: 4px;
+	margin-left: 2px;
 }
 .textHead {
 	font-size: 44px;
@@ -97,7 +97,7 @@ body {
 }
 .touch-box, .contact-box {
 	word-wrap: break-word;
-	height: 200px; 
+	height: 205px; 
 	border-top: 20px solid  #1A504E;
 	margin-top: 20px;
 	margin-bottom: 10px;
@@ -127,7 +127,7 @@ button{
 	width: 65px;
 	height: 27px;
 	border-radius: 15px;
-	margin: 5px 5px;
+	margin: 4px 5px 6px;
 }
 .little-btn-edit {
 	display: block;

@@ -6,9 +6,12 @@ var SearchContact = React.createClass({
 		if (this.state.editable){
 			var keyword = '#' + this.refs.keyword.value;
 			keyword= keyword.replace(/ +/g, "");
-			$('html,body').animate({
-        scrollTop: $(keyword.toLowerCase()).offset().top},
-        'fast');
+			if ($(keyword.toLowerCase()).offset() !== undefined){
+				
+				$('html,body').animate({
+	        scrollTop: $(keyword.toLowerCase()).offset().top},
+	        'fast');
+			}
 		}
 		this.setState({ editable: !this.state.editable});	
 	},
