@@ -23,10 +23,10 @@ class Api::V1::ContactsController < Api::V1::BaseController
 	private
 
 	def contact_params(touch_id)
-		params.require(:contact).permit(:id, :name, :email, :address, :phone).merge(touch_id: touch_id)
+		params.require(:contact).permit(:id, :name, :company, :email, :address, :phone).merge(touch_id: touch_id)
 	end
 
 	def touch_params
-		params.require(:touch).permit(:id, :calls, :emails, :mail, :advertisements)
+		params.require(:touch).permit(:id, :calls, :emails, :postcards, :mail, :advertisements)
 	end
 end

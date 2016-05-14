@@ -8,15 +8,16 @@ var AllContacts = React.createClass({
 		this.props.handleDelete(id);	
 	},
 	render() {
-		  var touches = this.props.contacts.map((touch) => {
+		  var contacts = this.props.contacts.map((contact) => {
       
 			return (
-				<div id ={touch.name.replace(/ +/g, "").toLowerCase()} className="contact-box" key={touch.id}>
-					<h3> {touch.name} </h3>
-					<p> {touch.email} </p>
-					<p> {touch.address} </p>
-					<p> {touch.phone} </p>
-					<button className="little-btn" onClick={this.handleDelete.bind(this, touch.id)}> Delete</button>
+				<div id ={contact.name.replace(/ +/g, "").toLowerCase()} className="contact-box" key={contact.id}>
+					<h3> {contact.name} </h3>
+					<p> {contact.company} </p>
+					<p> {contact.email} </p>
+					<p> {contact.address} </p>
+					<p> {contact.phone} </p>
+					<button className="little-btn" onClick={this.handleDelete.bind(this, contact.id)}> Delete</button>
 				</div>
 
 			)
@@ -24,11 +25,10 @@ var AllContacts = React.createClass({
 		});
 		return (
 			<div className="left-side">
-				{touches}
-				
+				{contacts}
 			</div>
 		)
 	}
 });
 
-// var touch_id = contact.id;
+

@@ -33,7 +33,8 @@ var Body = React.createClass({
 			calls:	0,
 			emails:	0,
 			id:		contact.id,
-			mail:		0
+			mail:		0,
+			postcards:		0
 		}
 			
 		 this.setState({ contacts: newState});
