@@ -3,19 +3,10 @@ class Api::V1::TouchesController < Api::V1::BaseController
 	def index
 		  touches = Touch.all 
 		  touches << { placeholder: []}
-		  touches[-1] = { touch_contacts: Contact.all}
-		 
-
+		  touches[-1] = { touch_contacts: Contact.all}		
 			respond_with touches
 	end
-	def create 
-		respond_with :api, :v1, Touch.create(contact_params)
-	end
-
-	def destroy
-		respond_with Touch.destroy(params[:id])
-	end
-
+	
 	def update
 		touch = Touch.find(params["id"])
 		touch.update_attributes(touch_params)
@@ -25,6 +16,6 @@ class Api::V1::TouchesController < Api::V1::BaseController
 	private
 
 	def touch_params
-		params.require(:touch).permit(:id, :calls, :emails, :mail, :advertisements)
+		params.require(:touch).permit(:id, :calls, :emails, :mail, :postcards, :advertisements)
 	end
 end

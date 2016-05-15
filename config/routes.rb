@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   end
   namespace :api do
     namespace :v1 do  
-      resources :touches, only: [:index, :create, :destroy, :update]
+      resources :touches, only: [:index, :update]
     end
   end
 end
