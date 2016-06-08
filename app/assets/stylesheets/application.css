@@ -108,7 +108,6 @@ body {
 	margin-top: 10px;
 	margin-bottom: 10px;
 	background: url('/assets/sci_fi_hexagon.jpg');
-	object-fit: cover;
 }
 .touch-box {
 	width: 283px;
@@ -130,9 +129,7 @@ button{
 	color: #fff;
 	font-size: 14px;
 	font-weight: 100;
-	margin-top: 10px;
-	
-	
+	margin-top: 10px;	
 }
 .little-btn, .little-btn-edit {
 	width: 65px;
@@ -166,8 +163,7 @@ button{
 
 @media only screen and (max-width: 945px) {
 	.largeIn , button{
-		margin-top: 10px;
-	
+		margin-top: 10px;	
 		width: 578px;
 	}
 }
@@ -181,8 +177,12 @@ button{
 	.search-input {
 		top: 102px;	
 }
-
-@media only screen and (max-width: 707px) {
+@media only screen and (max-width: 780px) {
+	.container {
+		margin-left: 50px;
+		}
+	}
+@media only screen and (max-width: 740px) {
 	.container {
 		width: 100%;
 	}
@@ -231,7 +231,7 @@ button{
 		background:  rgba(34,52,50,.3);
 	}
 	.search:hover{
-		background: #DD7500;
+		background: #fff;
 	}
 	.back {	
 		display: none;
@@ -263,10 +263,12 @@ button{
 		margin-left: 0px;
 		width: 100%;
 		margin-bottom: 4px;
+		height: 240px;
 	}
 	.contact-box {
 		margin: 0;
 		width: 100%;
+		height: 240px;
 		margin-top: 8px;
 		margin-bottom: 5px;
 	}
