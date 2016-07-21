@@ -1,10 +1,9 @@
 
-==============
 # Touches
 Created for Hudson Commercial Real Estate 
 ==============
 
-The touches app, is an app to help business professionals keep track of how often they are staying in touch with certain individuals and what mediums they using. This project was built using Facebook's fast front end framework React and ruby on rails for the backend API.
+The touches app, is an app to help business professionals keep track of how often they are staying in touch with certain individuals and what mediums they are using. This project was built using Facebook's fast front end framework React and ruby on rails for the backend API.
 
 ###Things that you need to do:
 1. You will need Ruby on Rails running locally on you development machine.
